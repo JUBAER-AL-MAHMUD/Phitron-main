@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run C Program",
+            "type": "shell",
+
+            "windows": {
+                "command": "cd \"week4/nested loop\" && gcc sum.c -o sum.exe && ./sum.exe < input.txt > output.txt && cat output.txt"
+            },
+
+            "linux": {
+                "command": "cd \"week4/nested loop\" && gcc sum.c -o sum && ./sum < input.txt > output.txt && cat output.txt"
+            },
+
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
