@@ -16,17 +16,17 @@ int main()
         }
     }
 
-    int flag = 100;
+    _Bool flag = 100;
 
-    if (r == c)
+    if (r == c) // square matrix
     {
         for (int i = 0; i < r; i++)
         {
             for (int j = 0; j < c; j++)
             {
-                if (i == j)
+                if (i + j == r - 1)
                 {
-
+                    //we are on the diagonal
                 }
                 else
                 {
@@ -34,20 +34,17 @@ int main()
                     if (arr[i][j] != 0)
                     {
                         flag = 200;
+                        printf("this is not a diagonal matrix");
                     }
                 }
             }
         }
+        if (flag == true)
+        {
+            printf("this is a diagonal matrix");
+        }
     }
-    else
-    {
-        flag = 200;
-    }
-
-    if (flag == 100)
-    {
-        printf("this is a diagonal matrix");
-    }
+    
     else
     {
         printf("this is not a diagonal matrix");
