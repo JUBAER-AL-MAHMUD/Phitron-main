@@ -39,7 +39,7 @@ int main()
                 }
             }
         }
-        if (flag == true)
+        if (flag == 200)
         {
             printf("this is a diagonal matrix");
         }
