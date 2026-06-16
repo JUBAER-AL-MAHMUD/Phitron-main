@@ -8,16 +8,14 @@ class Student
     int marks;
 };
 
-bool cmp (Student a, Student b)
+bool cmp(Student a, Student b)
 {
-    if (a.marks < b.marks)
+    if (a.roll == b.roll)
     {
-        return true;
+        return a.marks > b.marks;
     }
-    else 
-    {
-        return false;
-    }
+
+    return a.roll < b.roll;
 }
 int main() 
 {
