@@ -1,23 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main() 
+
+int main()
 {
     int T;
     cin >> T;
-    string S,X;
-    for (int i = 0; i < T; i++)
+
+    while (T--)
     {
-      
-      cin >> S >> X;
+        string S, X;
+        cin >> S >> X;
+
+        int pos = S.find(X);
+
+        while (pos != -1)
+        {
+            S.replace(pos, X.size(), "#");
+            pos = S.find(X);
+        }
+
+        cout << S << endl;
     }
-    
-    int A = S.find(X);
-    while (A != -1)
-    {
-        SS.replace(A, x.size(), "#");
-        A = S.find(X);
-    }
-    cout << S << endl;
 
     return 0;
 }
