@@ -11,12 +11,12 @@ int main()
         string S, X;
         cin >> S >> X;
 
-        int pos = S.find(X);
+        int rep = S.find(X);
 
-        while (pos != -1)
+        while (rep != -1)
         {
-            S.replace(pos, X.size(), "#");
-            pos = S.find(X);
+            S.replace(rep, X.size(), "#");
+            rep = S.find(X);
         }
 
         cout << S << endl;

@@ -4,27 +4,29 @@ class Student
 {
 public:
     string nm;
+    int cls;
     string s;
     int id;
-
-    Student(string name, string str, int id)
-    {
-        this->nm = name;
-        this->s = str;
-        this->id = id;
-    }
 };
 
 int main()
 {
     int N;
     cin >> N;
-    string name, s ;
-    int id;
-    cin>> name >> s >> id;
-    Student st(name, s, id);
+    Student arr[N];
+    for (int i = 0; i < N; i++)
+    {
+        cin >> arr[i].nm >> arr[i].cls >> arr[i].s >> arr[i].id;
+    }
 
-    cout << st.nm << " " << st.s << " " << st.id << endl;
+    for (int i = 0; i < N / 2; i++)
+    {
+        swap(arr[i].s, arr[N - 1 - i].s);
+    }
 
+    for (int i = 0; i < N; i++)
+    {
+        cout << arr[i].nm << " " << arr[i].cls << " " << arr[i].s << " " << arr[i].id << endl;
+    }
     return 0;
 }
