@@ -1,0 +1,1 @@
+{"name":"Local: link_list","url":"/home/hidden/Documents/phitron/DSA/week_2/link_list.cpp","tests":[{"id":1782841616404,"input":"10 20 30","output":"10 20 30"},{"id":1782841639698,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hidden/Documents/phitron/DSA/week_2/link_list.cpp","group":"local","local":true}
