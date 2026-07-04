@@ -23,25 +23,28 @@ void print_list(node *head)
     }
 }
 
-void insert_at_tail(node *&head, int val)
+void insert_at_tail(node *&head,node *&tail, int val)
 {
     node *newNode = new node(val);
-    node *tmp = head;
-    while (tmp->next != NULL)
+    if (head == NULL)
     {
-        tmp = tmp->next;
+        head = newNode;
+        return;
     }
-    tmp->next = newNode;
+    tail->next = newNode;
+    tail = tail->next;
 }
 int main()
 {
     node *head = new node(10);
     node *a = new node(100);
     node *b = new node(1000);
+    node *tail = b;
 
     head->next = a;
     a->next = b;
-    insert_at_tail (head, 2000);
+    insert_at_tail (head,tail,2000);
+     insert_at_tail (head,tail,4000);
     print_list (head);
 
     return 0;
