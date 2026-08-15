@@ -25,7 +25,7 @@ int main()
 
     if (N != M)
     {
-        cout << "NO";
+        cout << "NO"<< endl;
         return 0;
     }
 
