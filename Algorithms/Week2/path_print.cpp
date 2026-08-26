@@ -4,6 +4,7 @@ using namespace std;
 vector<int> adj_list[1005];
 bool visited[1005];
 int level[1005];
+int parentt[1005];
 
 void bfs(int src)
 {
@@ -26,6 +27,7 @@ void bfs(int src)
                 q.push(child);
                 visited[child] = true;
                 level[child] = level[parent] + 1;
+                parentt[child] = parent;
             }
         }
     }
@@ -45,15 +47,16 @@ int main()
 
     memset(visited, false, sizeof(visited));
     memset(level, -1, sizeof(level));
+    memset(parentt, -1, sizeof(parentt));
     int src, dst;
     cin >> src >> dst;
     bfs(src);
     for (int i = 1; i <= n; i++)
     {
-        cout << "Level of " << i << " is: " << level[i] << endl;
+        cout <<i << " parent->" << parentt[i] << endl;   
     }
 
-    
+    cout<< level[dst]<<endl;
 
     return 0;
 }
