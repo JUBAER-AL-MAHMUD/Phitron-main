@@ -1,0 +1,1 @@
+{"name":"Local: bfs2d","url":"/home/hidden/Documents/Phitron-main/Algorithms/Week1/module3/bfs2d.cpp","tests":[{"id":1787731045658,"input":"3 4 \n....\n....\n....\n1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/hidden/Documents/Phitron-main/Algorithms/Week1/module3/bfs2d.cpp","group":"local","local":true}
